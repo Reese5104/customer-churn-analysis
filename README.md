@@ -53,10 +53,10 @@ https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 > These charts are generated from Python (matplotlib / seaborn)
 
 ### 📉 Churn by Contract Type
-![Churn by Contract](visualizations/churn_by_contract.png)
+![Churn by Contract](visualizations/churn_rate_by_contract.png)
 
 ### 📉 Churn by Tenure
-![Churn by Tenure](visualizations/churn_by_tenure.png)
+![Churn by Tenure](visualizations/churn_rate_by_tenure.png)
 
 ### 💰 Monthly Charges vs Churn
 ![Monthly Charges](visualizations/monthly_charges_vs_churn.png)
