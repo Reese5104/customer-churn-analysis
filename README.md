@@ -2,12 +2,12 @@
 
 An end-to-end analytics project that identifies **why telecom customers churn and how to reduce churn risk** using the IBM Telco Customer Churn dataset.
 
-This project demonstrates real-world data analytics skills including:
+This project demonstrates real-world data analytics and data science skills, including:
 - SQL data cleaning & transformation
 - Exploratory Data Analysis (EDA) in Python
 - Data visualization & storytelling
-- Business insights & recommendations
-- Optional predictive modeling
+- Business insight generation
+- Predictive modeling (Logistic Regression baseline)
 
 ---
 
@@ -18,7 +18,7 @@ Customer churn directly impacts revenue and profitability. The goal of this anal
 - Why customers leave
 - Which customers are most likely to churn
 - What behavioral and contract factors drive churn
-- What business actions can improve retention
+- What actions can reduce churn and improve retention
 
 ---
 
@@ -27,30 +27,30 @@ Customer churn directly impacts revenue and profitability. The goal of this anal
 - What are the strongest predictors of churn?
 - Which customer segments are at highest risk?
 - How do contract types affect churn rates?
-- Does tenure influence customer retention?
-- How do pricing and services impact churn?
+- Does customer tenure influence retention?
+- How do pricing and service choices impact churn?
 
 ---
 
 ## 📂 Dataset
 
-IBM Telco Customer Churn Dataset  
+**IBM Telco Customer Churn Dataset**  
 https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 
 ---
 
-## 📊 Key Insights (Replace with your results)
+## 📊 Key Insights
 
-- Month-to-month customers have the highest churn rate (~X%)
+- Month-to-month customers show the highest churn rates
 - Customers with low tenure (<12 months) are significantly more likely to churn
-- Electronic check payment users show higher churn risk
-- Customers with add-on services (tech support, security) are less likely to churn
+- Electronic check payment users have elevated churn risk
+- Customers with add-on services (tech support, online security) are more likely to be retained
 
 ---
 
 ## 📈 Visualizations
 
-> These charts are generated from Python (matplotlib / seaborn)
+> Generated using Python (matplotlib + seaborn)
 
 ### 📉 Churn by Contract Type
 ![Churn by Contract](visualizations/churn_rate_by_contract.png)
@@ -68,11 +68,12 @@ https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 
 ## 🤖 Predictive Modeling (Logistic Regression Baseline)
 
-A baseline Logistic Regression model was trained to predict customer churn using:
+A baseline Logistic Regression model was built to predict customer churn using:
 
 - One-hot encoded categorical variables  
 - Standardized numeric features  
 - Balanced class weights to handle class imbalance  
+
 ---
 
 ### 📊 Model Performance
@@ -93,24 +94,30 @@ A baseline Logistic Regression model was trained to predict customer churn using
     accuracy                           0.73      1758
    macro avg       0.70      0.76      0.71      1758
 weighted avg       0.80      0.73      0.75      1758
+````
 
+---
 
- 🧠 Methods Used
+## 🧠 Methods Used
 
-### SQL (Data Engineering)
-- Data cleaning & preprocessing
-- Feature engineering (tenure groups, churn flags)
-- Aggregations and cohort analysis
+### 🗄 SQL (Data Engineering)
 
-### Python (Data Analysis)
-- pandas, NumPy for data manipulation
-- seaborn, matplotlib for visualization
-- exploratory data analysis (EDA)
-- optional logistic regression model
+* Data cleaning & preprocessing
+* Feature engineering (tenure groups, churn flags)
+* Aggregations and cohort analysis
 
+### 🐍 Python (Data Analysis)
 
- 🏗 Project Structure
+* pandas, NumPy for data manipulation
+* seaborn, matplotlib for visualization
+* exploratory data analysis (EDA)
+* logistic regression modeling
 
+---
+
+## 🏗 Project Structure
+
+```text
 customer-churn-analysis/
 ├── data/
 │   ├── raw/
@@ -130,3 +137,19 @@ customer-churn-analysis/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+```
+
+---
+
+## 🚀 Project Value
+
+This project demonstrates:
+
+* End-to-end analytics workflow (SQL → Python → Insights)
+* Business-focused thinking, not just technical execution
+* Ability to translate data into actionable business decisions
+* Early-stage machine learning modeling for prediction
+
+---
+
+
