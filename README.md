@@ -111,7 +111,6 @@ weighted avg       0.80      0.73      0.75      1758
 
 ## 🏗 Project Structure
 
-```text
 customer-churn-analysis/
 ├── data/
 │   ├── raw/
@@ -131,3 +130,4 @@ customer-churn-analysis/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+---
