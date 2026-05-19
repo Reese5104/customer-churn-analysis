@@ -94,7 +94,8 @@ A baseline Logistic Regression model was trained to predict customer churn using
    macro avg       0.70      0.76      0.71      1758
 weighted avg       0.80      0.73      0.75      1758
 
-## 🧠 Methods Used
+
+ 🧠 Methods Used
 
 ### SQL (Data Engineering)
 - Data cleaning & preprocessing
@@ -107,9 +108,8 @@ weighted avg       0.80      0.73      0.75      1758
 - exploratory data analysis (EDA)
 - optional logistic regression model
 
----
 
-## 🏗 Project Structure
+ 🏗 Project Structure
 
 customer-churn-analysis/
 ├── data/
@@ -130,4 +130,3 @@ customer-churn-analysis/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
----
