@@ -83,9 +83,10 @@ A baseline Logistic Regression model was trained to predict customer churn using
 
 ---
 
+---
+
 ### 📉 Classification Report
 
-```text
               precision    recall  f1-score   support
 
     Retained       0.91      0.71      0.80      1291
@@ -95,6 +96,7 @@ A baseline Logistic Regression model was trained to predict customer churn using
    macro avg       0.70      0.76      0.71      1758
 weighted avg       0.80      0.73      0.75      1758
 
+---
 
 ---
 
