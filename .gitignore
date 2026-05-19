@@ -4,8 +4,3 @@ __pycache__/
 .ipynb_checkpoints/
 .venv/
 venv/
-
-# Keep folder placeholders
-!data/raw/.gitkeep
-!data/processed/.gitkeep
-!visualizations/.gitkeep
