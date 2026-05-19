@@ -1,34 +1,119 @@
-# Customer-churn-analysis
-Customer churn analytics project using SQL, Python, and business intelligence techniques. The analysis uses the IBM Telco Customer Churn dataset to identify churn drivers, high-risk customer segments, and practical retention actions for a telecom business.
+# 📊 Customer Churn Analysis (SQL + Python + Machine Learning)
 
-# Customer Churn Analysis
+An end-to-end analytics project that identifies **why telecom customers churn and how to reduce churn risk** using the IBM Telco Customer Churn dataset.
 
-Customer churn analytics project using SQL, Python, and business intelligence techniques. The analysis uses the IBM Telco Customer Churn dataset to identify churn drivers, high-risk customer segments, and practical retention actions for a telecom business.
+This project demonstrates real-world data analytics skills including:
+- SQL data cleaning & transformation
+- Exploratory Data Analysis (EDA) in Python
+- Data visualization & storytelling
+- Business insights & recommendations
+- Optional predictive modeling
 
-## Business Objective
+---
 
-Customer acquisition is expensive, so reducing churn can materially improve profitability. This project answers four core business questions:
+## 🎯 Business Problem
 
-- Which factors are most strongly associated with churn?
+Customer churn directly impacts revenue and profitability. The goal of this analysis is to understand:
+
+- Why customers leave
+- Which customers are most likely to churn
+- What behavioral and contract factors drive churn
+- What business actions can improve retention
+
+---
+
+## ❓ Key Business Questions
+
+- What are the strongest predictors of churn?
 - Which customer segments are at highest risk?
-- How do demographics, contracts, tenure, services, and spending relate to churn?
-- What targeted actions could reduce churn?
+- How do contract types affect churn rates?
+- Does tenure influence customer retention?
+- How do pricing and services impact churn?
 
-## Dataset
+---
 
-Use the IBM Telco Customer Churn dataset from Kaggle:
+## 📂 Dataset
 
+IBM Telco Customer Churn Dataset  
 https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 
-Place the downloaded CSV here:
+---
+
+## 📊 Key Insights (Replace with your results)
+
+- Month-to-month customers have the highest churn rate (~X%)
+- Customers with low tenure (<12 months) are significantly more likely to churn
+- Electronic check payment users show higher churn risk
+- Customers with add-on services (tech support, security) are less likely to churn
+
+---
+
+## 📈 Visualizations
+
+> These charts are generated from Python (matplotlib / seaborn)
+
+### 📉 Churn by Contract Type
+![Churn by Contract](visualizations/churn_by_contract.png)
+
+### 📉 Churn by Tenure
+![Churn by Tenure](visualizations/churn_by_tenure.png)
+
+### 💰 Monthly Charges vs Churn
+![Monthly Charges](visualizations/monthly_charges_vs_churn.png)
+
+### 🔥 Correlation Heatmap
+![Correlation Heatmap](visualizations/correlation_heatmap.png)
+
+---
+
+## 🤖 Predictive Modeling (Logistic Regression Baseline)
+
+A baseline Logistic Regression model was trained to predict customer churn using:
+
+- One-hot encoded categorical variables  
+- Standardized numeric features  
+- Balanced class weights to handle class imbalance  
+
+---
+
+### 📊 Model Performance
+
+- **ROC AUC Score:** 0.839  
+- **Accuracy:** 0.73  
+
+---
+
+### 📉 Classification Report
 
 ```text
-data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv
-```
+              precision    recall  f1-score   support
 
-The raw dataset is excluded from version control because it is externally sourced.
+    Retained       0.91      0.71      0.80      1291
+     Churned       0.50      0.80      0.62       467
 
-## Project Structure
+    accuracy                           0.73      1758
+   macro avg       0.70      0.76      0.71      1758
+weighted avg       0.80      0.73      0.75      1758
+
+
+---
+
+## 🧠 Methods Used
+
+### SQL (Data Engineering)
+- Data cleaning & preprocessing
+- Feature engineering (tenure groups, churn flags)
+- Aggregations and cohort analysis
+
+### Python (Data Analysis)
+- pandas, NumPy for data manipulation
+- seaborn, matplotlib for visualization
+- exploratory data analysis (EDA)
+- optional logistic regression model
+
+---
+
+## 🏗 Project Structure
 
 ```text
 customer-churn-analysis/
@@ -47,81 +132,6 @@ customer-churn-analysis/
 │   └── modeling.py
 ├── visualizations/
 ├── reports/
-│   ├── executive_summary.md
-│   └── business_recommendations.md
 ├── README.md
 ├── requirements.txt
 └── .gitignore
-```
-
-## How to Run
-
-Create an environment and install dependencies:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-Clean the raw dataset and create a SQLite database:
-
-```bash
-python src/data_cleaning.py
-```
-
-Generate exploratory charts:
-
-```bash
-python src/analysis.py
-```
-
-Train an optional baseline churn model:
-
-```bash
-python src/modeling.py
-```
-
-Run the SQL workflow in SQLite:
-
-```bash
-sqlite3 data/processed/churn.db < sql/schema.sql
-sqlite3 data/processed/churn.db
-```
-
-Inside SQLite, import the raw CSV into `raw_telco`, then run:
-
-```sql
-.read sql/data_cleaning.sql
-.read sql/business_queries.sql
-```
-
-## Methods
-
-- Data cleaning: column standardization, numeric conversion, missing value handling, churn flag creation, tenure grouping, and charge-per-tenure feature engineering.
-- SQL analysis: churn rate by contract, tenure, internet service, payment method, senior citizen status, monthly charge bands, and bundled services.
-- Python analysis: descriptive statistics, churn segmentation, distribution analysis, visualizations, and optional predictive modeling.
-- Modeling: baseline logistic regression with one-hot encoded categorical features and standardized numeric features.
-
-## Expected Portfolio Outputs
-
-- Cleaned analytical dataset in `data/processed/churn_cleaned.csv`
-- SQLite database in `data/processed/churn.db`
-- SQL queries that answer stakeholder questions
-- Visualizations in `visualizations/`
-- Executive summary and business recommendations in `reports/`
-- Optional churn model performance report in `reports/model_performance.md`
-
-## Key Business Hypotheses
-
-- Month-to-month customers will churn at a materially higher rate than customers on one- or two-year contracts.
-- Customers with short tenure will be less retained because they have not yet developed switching costs.
-- Electronic check users may have elevated churn risk relative to automatic payment customers.
-- High monthly charges without stabilizing services, such as tech support or online security, may indicate a value-perception problem.
-
-## Recommended Next Steps
-
-- Add the raw Kaggle CSV to `data/raw/`.
-- Run the cleaning, analysis, and modeling scripts.
-- Update the report files with the exact metric values generated from your local run.
-- Add final visualizations and screenshots to the README before publishing to GitHub.
